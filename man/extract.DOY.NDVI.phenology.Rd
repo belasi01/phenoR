@@ -2,9 +2,9 @@
 % Please edit documentation in R/extract.DOY.NDVI.phenology.R
 \name{extract.DOY.NDVI.phenology}
 \alias{extract.DOY.NDVI.phenology}
-\title{Extrait des evenement phenologique d'un cycle annuel de NDVI
-à partir de donnees extraites de
-Google Earth Engine generees avec la fonction
+\title{Extrait des événements phénologiques d'un cycle annuel de NDVI
+à partir de données extraites de
+Google Earth Engine générées avec la fonction
 ui.Chart.image.doySeriesByYear.}
 \usage{
 extract.DOY.NDVI.phenology(filen, SpringBloom.Threshold = 0.25,
@@ -12,43 +12,43 @@ extract.DOY.NDVI.phenology(filen, SpringBloom.Threshold = 0.25,
   Winter.Threshold = 0.5)
 }
 \arguments{
-\item{filen}{est le nom du fichier CVS telecharger de GEE et produit par
+\item{filen}{est le nom du fichier CVS telechargé de GEE et produit par
 ui.Chart.image.doySeriesByYear. Le fichier peut contenir plusieurs annees.}
 
 \item{SpringBloom.Threshold}{fraction de la valeur maximum de NDVI que l'on
-considere en debut de saison pour identifier le début de la croissance.
+considere en début de saison pour identifier le début de la croissance.
 (valeur par défault est 0.25)}
 
 \item{Maximum.Threshold}{fraction de la valeur maximum de NDVI que l'on
-considere en debut de saison pour identifier la date ou la vegetation a
+considère en début de saison pour identifier la date où la végétation a
 atteint sa maturité.
  (valeur par défault est 0.9)}
 
 \item{Scenescence.Threshold}{fraction de la valeur maximum de NDVI que l'on
-considere à l'automne quand la végétation commence sa sénescence.
+considère à l'automne quand la végétation commence sa sénescence.
  (valeur par défault est 0.85)}
 
 \item{Winter.Threshold}{fraction de la valeur maximum de NDVI que l'on
-considere après la sénescence.
+considère après la sénescence.
  (valeur par défault est 0.5)}
 }
 \value{
-Retourne un tableau avec le jour de l'annee de chaque evenements.
-De plus, une figure en format png est creee dans le repertoire de travail pour
-chaque annee contenue dans le fichier CSV.
+Retourne un tableau avec le jour de l'année de chaque événements.
+De plus, une figure en format png est créée dans le répertoire de travail pour
+chaque année contenue dans le fichier CSV.
 }
 \description{
-La fonction trouve les dates (jour de l'annee) de
-plusieurs evenements
+La fonction trouve les dates (jour de l'année) de
+plusieurs événements phénologiques
 en fonction des seuils qui sont passés à la
 fonction comme paramètres:
 le jour du début de la saison de croissance (C);
-le jour ou le NDVI atteint son maximum (M);
-le jour marquant le debut de la senescence (S);
-le jour marquant le debut de l'hiver (W);
-la duree de la période de croissance (DC = M - C);
-la duree de la période de la saison de production  (DP = S - C);
-la duree de la période de sénescence (DS = W - S).
+le jour où le NDVI atteint son maximum (M);
+le jour marquant le début de la sénescence (S);
+le jour marquant le début de l'hiver (W);
+la durée de la période de croissance (DC = M - C);
+la durée de la période de la saison de production  (DP = S - C);
+la durée de la période de sénescence (DS = W - S).
 }
 \author{
 Simon Bélanger

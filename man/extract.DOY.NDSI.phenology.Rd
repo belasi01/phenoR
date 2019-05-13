@@ -2,30 +2,30 @@
 % Please edit documentation in R/extract.DOY.NDSI.phenology.R
 \name{extract.DOY.NDSI.phenology}
 \alias{extract.DOY.NDSI.phenology}
-\title{Extrait des evenement phenologique d'un cycle annuel de NDSI
-à partir de donnees extraites de
-Google Earth Engine generees avec la fonction
+\title{Extrait des événements phénologiques d'un cycle annuel de NDSI
+à partir de données extraites de
+Google Earth Engine générées avec la fonction
 ui.Chart.image.doySeriesByYear.}
 \usage{
 extract.DOY.NDSI.phenology(filen, Melt.Onset.Threshold = 0.75,
   Snow.Free.Threshold = 0.15, Fall.Snow.Thresold = 0.15)
 }
 \arguments{
-\item{filen}{est le nom du fichier CVS telecharger de GEE et produit par
-ui.Chart.image.doySeriesByYear. Le fichier peut contenir plusieurs annees.}
+\item{filen}{est le nom du fichier CVS telechargé de GEE et produit par
+ui.Chart.image.doySeriesByYear. Le fichier peut contenir plusieurs années.}
 }
 \value{
-Retourne un tableau avec le jour de l'annee de chaque evenements.
-De plus, une figure en format png est creee dans le repertoire de travail pour
-chaque annee contenue dans le fichier CSV.
+Retourne un tableau avec le jour de l'année de chaque evenements.
+De plus, une figure en format png est creee dans le répertoire de travail pour
+chaque année contenue dans le fichier CSV.
 }
 \description{
-La fonction trouve les dates (jour de l'annee) de plusieurs evenements :
+La fonction trouve les dates (jour de l'année) de plusieurs événements phénologiques :
 le jour du début de la fonte de la neige (Melt.Onset);
 le jour de la fonte totale de la neige (Snow.Free);
-le jour des premieres neige d'automne (Fall.Snow);
-la duree de la fonte (DF = Snow.Free - Melt.Onset);
-la duree de la saison sans neige (DSSN= Fall.Snow - Snow.Free).
+le jour des premières neige d'automne (Fall.Snow);
+la durée de la fonte (DF = Snow.Free - Melt.Onset);
+la durée de la saison sans neige (DSSN= Fall.Snow - Snow.Free).
 }
 \author{
 Simon Bélanger

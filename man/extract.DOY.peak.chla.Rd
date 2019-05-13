@@ -2,31 +2,31 @@
 % Please edit documentation in R/extract.DOY.peak.chla.R
 \name{extract.DOY.peak.chla}
 \alias{extract.DOY.peak.chla}
-\title{Extrait le jour de l'annee du pic de Chlorophylle-a
-et sa valeur à partir de donnees extraites de
-Google Earth Engine generees avec la fonction
+\title{Extrait le jour de l'année du pic de Chlorophylle-a
+et sa valeur à partir de données extraites de
+Google Earth Engine générées avec la fonction
 ui.Chart.image.doySeriesByYear.}
 \usage{
 extract.DOY.peak.chla(filen, start = 30, end = 180)
 }
 \arguments{
-\item{filen}{est le nom du fichier CVS telecharger de GEE et produit par
-ui.Chart.image.doySeriesByYear. Le fichier peut contenir plusieurs annees.}
+\item{filen}{est le nom du fichier CVS telechargé de GEE et produit par
+ui.Chart.image.doySeriesByYear. Le fichier peut contenir plusieurs années.}
 
-\item{start}{est le jour de l'annee correspondant au debut de la periode qui nous interesse}
+\item{start}{est le jour de l'année correspondant au debut de la période qui nous interesse}
 
-\item{end}{est le jour de l'annee correspondant a la fin de la periode qui nous interesse}
+\item{end}{est le jour de l'année correspondant à la fin de la période qui nous interesse}
 }
 \value{
-Retourne un tableau avec le jour de l'annee ou le pic de Chla
+Retourne un tableau avec le jour de l'année ou le pic de Chla
 est atteint et la valeur du pic.
-De plus, une figure en format png est cree dans le repertoire de travail pour
-chaque annee contenu dans le fichier CSV.
+De plus, une figure en format *.png est crée dans le repertoire de travail pour
+chaque année contenu dans le fichier CSV.
 }
 \description{
-Extrait le jour de l'annee du pic de Chlorophylle-a
-et sa valeur à partir de donnees extraites de
-Google Earth Engine generees avec la fonction
+Extrait le jour de l'année du pic de Chlorophylle-a
+et sa valeur à partir de données extraites de
+Google Earth Engine générées avec la fonction
 ui.Chart.image.doySeriesByYear.
 }
 \author{

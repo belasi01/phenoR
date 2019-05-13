@@ -1,17 +1,17 @@
-#' Extrait le jour de l'annee du pic de Chlorophylle-a
-#' et sa valeur à partir de donnees extraites de
-#' Google Earth Engine generees avec la fonction
+#' Extrait le jour de l'année du pic de Chlorophylle-a
+#' et sa valeur à partir de données extraites de
+#' Google Earth Engine générées avec la fonction
 #' ui.Chart.image.doySeriesByYear.
 #'
-#' @param filen est le nom du fichier CVS telecharger de GEE et produit par
-#' ui.Chart.image.doySeriesByYear. Le fichier peut contenir plusieurs annees.
-#' @param start est le jour de l'annee correspondant au debut de la periode qui nous interesse
-#' @param end est le jour de l'annee correspondant a la fin de la periode qui nous interesse
+#' @param filen est le nom du fichier CVS telechargé de GEE et produit par
+#' ui.Chart.image.doySeriesByYear. Le fichier peut contenir plusieurs années.
+#' @param start est le jour de l'année correspondant au debut de la période qui nous interesse
+#' @param end est le jour de l'année correspondant à la fin de la période qui nous interesse
 #'
-#' @return Retourne un tableau avec le jour de l'annee ou le pic de Chla
+#' @return Retourne un tableau avec le jour de l'année ou le pic de Chla
 #' est atteint et la valeur du pic.
-#' De plus, une figure en format png est cree dans le repertoire de travail pour
-#' chaque annee contenu dans le fichier CSV.
+#' De plus, une figure en format *.png est crée dans le repertoire de travail pour
+#' chaque année contenu dans le fichier CSV.
 #'
 #' @author Simon Bélanger
 #'
