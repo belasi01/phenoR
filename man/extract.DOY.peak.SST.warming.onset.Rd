@@ -8,7 +8,7 @@ et sa valeur à partir de donnees extraites de
 Google Earth Engine générées avec la fonction
 ui.Chart.image.doySeriesByYear.}
 \usage{
-extract.DOY.peak.SST.warming.onset(filen)
+\method{extract}{DOY.peak.SST.warming.onset}(filen)
 }
 \arguments{
 \item{filen}{est le nom du fichier CVS telechargé de GEE et produit par

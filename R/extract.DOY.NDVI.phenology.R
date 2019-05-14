@@ -72,7 +72,11 @@ extract.DOY.NDVI.phenology <- function(filen,
     smoothed <- loess(year ~ doy, data=df, span = 0.1)
     x  = predict(smoothed, 1:365)
 
-    C[i] <- which(x > SpringBloom.Threshold)[1]
+    delta = (x[2:365] - x[1:364])
+    delta = c(delta,NA)
+
+
+    C[i] <- which(x > SpringBloom.Threshold & delta > 0)[1]
     M[i] <- which(x > Maximum.Threshold)[1]
     tmp <- which(x > Scenescence.Threshold)
     S[i] <- tmp[length(tmp)]

@@ -7,7 +7,7 @@
 Google Earth Engine générées avec la fonction
 ui.Chart.image.doySeriesByYear.}
 \usage{
-extract.DOY.NDVI.phenology(filen, SpringBloom.Threshold = 0.25,
+\method{extract}{DOY.NDVI.phenology}(filen, SpringBloom.Threshold = 0.25,
   Maximum.Threshold = 0.9, Scenescence.Threshold = 0.85,
   Winter.Threshold = 0.5)
 }

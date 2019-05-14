@@ -4,8 +4,9 @@ Title: Analyse des series temporelles pour la phénologie provenant de Google Ea
 Version: 0.1.0
 Author: Simon Bélanger
 Maintainer: The package maintainer <simon_belanger@uqar.ca>
-Description: Créé pour le cours de phénologie de l'UQAR. 
+Description: Créé pour le cours de phénologie de l'UQAR. Permet d'analyser des séries temporelles journalières annuelles pour extraire des paramètres phénologiques (NDVI, NDSI, Chla et SST).   
 License: no
 Encoding: UTF-8
+Depends: ggplot2, stringr, tidyverse
 LazyData: true
 RoxygenNote: 6.1.1

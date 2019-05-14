@@ -12,7 +12,16 @@
 #'
 #' @param filen est le nom du fichier CVS telechargé de GEE et produit par
 #' ui.Chart.image.doySeriesByYear. Le fichier peut contenir plusieurs années.
-
+#' @param Melt.Onset.Threshold fraction de la valeur maximum de NDSI que l'on
+#' considere en début de saison pour identifier le début de la fonte de la neige.
+#' (valeur par défault est 0.75)
+#' @param Snow.Free.Threshold fraction de la valeur maximum de NDSI que l'on
+#' considere pour identifier la fonte complète de la neige.
+#' (valeur par défault est 0.15)
+#' @param Fall.Snow.Thresold fraction de la valeur maximum de NDSI que l'on
+#' considere à la fin de l'été pour identifier l'apparition de la neige.
+#' (valeur par défault est 0.15)
+#'
 #' @return Retourne un tableau avec le jour de l'année de chaque evenements.
 #' De plus, une figure en format png est creee dans le répertoire de travail pour
 #' chaque année contenue dans le fichier CSV.
@@ -51,7 +60,11 @@ extract.DOY.NDSI.phenology <- function(filen,
     smoothed <- loess(year ~ doy, data=df, span = 0.1)
     x  = predict(smoothed, 1:365)
 
-    Melt.Onset[i] <- which(x < Melt.Onset.Threshold)[1]
+    delta = (x[2:365] - x[1:364])
+    delta = c(delta,NA)
+
+
+    Melt.Onset[i] <- which(x < Melt.Onset.Threshold & delta < 0)[1]
     Snow.Free[i] <- which(x < Snow.Free.Threshold)[1]
     tmp <- which(x < Fall.Snow.Thresold)
     Fall.Snow[i] <- tmp[length(tmp)]

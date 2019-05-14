@@ -7,12 +7,24 @@
 Google Earth Engine générées avec la fonction
 ui.Chart.image.doySeriesByYear.}
 \usage{
-extract.DOY.NDSI.phenology(filen, Melt.Onset.Threshold = 0.75,
+\method{extract}{DOY.NDSI.phenology}(filen, Melt.Onset.Threshold = 0.75,
   Snow.Free.Threshold = 0.15, Fall.Snow.Thresold = 0.15)
 }
 \arguments{
 \item{filen}{est le nom du fichier CVS telechargé de GEE et produit par
 ui.Chart.image.doySeriesByYear. Le fichier peut contenir plusieurs années.}
+
+\item{Melt.Onset.Threshold}{fraction de la valeur maximum de NDSI que l'on
+considere en début de saison pour identifier le début de la fonte de la neige.
+(valeur par défault est 0.75)}
+
+\item{Snow.Free.Threshold}{fraction de la valeur maximum de NDSI que l'on
+considere pour identifier la fonte complète de la neige.
+(valeur par défault est 0.15)}
+
+\item{Fall.Snow.Thresold}{fraction de la valeur maximum de NDSI que l'on
+considere à la fin de l'été pour identifier l'apparition de la neige.
+(valeur par défault est 0.15)}
 }
 \value{
 Retourne un tableau avec le jour de l'année de chaque evenements.

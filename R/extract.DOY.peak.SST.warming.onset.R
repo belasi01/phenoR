@@ -48,9 +48,11 @@ extract.DOY.peak.SST.warming.onset <- function(filen) {
     myplot<-ggplot(aes(x = doy), data=df) +
       geom_point(aes(y = year, color = cyears[i])) +
       geom_smooth(aes(y = year, color = cyears[i]), span=0.25, data=df) +
+      geom_point(aes(x = DOY.peak.sst[i], y = x[DOY.peak.sst[i]], color="SST peak"), size=3) +
+      geom_point(aes(x = warming.onset[i], y = x[warming.onset[i]], color="Warming onset"), size=3) +
       theme_bw() +
       xlab("Jour de l'année") +
-      ylab("Température de surface de la mer") +
+      ylab("Température de surface de la mer (°C)") +
       theme(legend.title = element_blank())
     print(myplot)
     dev.off()
